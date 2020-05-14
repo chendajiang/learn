@@ -25,13 +25,13 @@
 
 4、如果需要提交到远程github仓库上的话有以下步骤
 	a、cd ~/.ssh 先查看目录下有没有密文了，如果返回的ls有3个文件id_rsa、id_rsa.pub,则密钥已经生成。没有的话往下走
-	b、创建ssh密文$ ssh-keygen -t rsa -C "hanyuntaocn@163.com"
+	b、创建ssh密文$ ssh-keygen -t rsa -C "1422364912@qq.com"
 		生成，生成过程中一路按3次回车键就好了。（默认路径，默认没有密码登录）
-		生成成功后，去对应目录C:\Users\hyt.ssh里（hyt为电脑用户名，每个人不同）用记事本打开id_rsa.pub，得到ssh key公钥。
+		生成成功后，去对应目录C:\Users\chenpijiang\.ssh里（chenpijiang为电脑用户名，每个人不同）用记事本打开id_rsa.pub，得到ssh key公钥。
 	c、为github账号配置ssh key
 		切换到github，展开个人头像的小三角，点击settings，然后打开SSH keys菜单， 点击Add SSH key新增密钥，填上标题（最好跟本地仓库保持一致）。
 	d、关联github仓库
-		git remote add origin git@github.com:chendajiang/ziliao.git
+		git remote add origin https://github.com/chendajiang/learn.git  或者 git remote add origin git@github.com:chendajiang/learn.git
 		添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。
 	e、推送本地文件到github仓库
 		git push -u origin master
